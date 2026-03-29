@@ -175,11 +175,11 @@ The workflow emphasizes **fully local execution**, no external APIs are required
 However, hardware can significantly affect performance:
 
 - On Apple Silicon (M‑series), Ollama runs natively and may leverage the Metal API for GPU support, but in many cases it primarily uses the **CPU**, even on M2/M‑series hardware.  
-  Real‑world GPU acceleration on Apple Silicon with Ollama can be limited or inconsistent. :contentReference[oaicite:5]{index=5}
+  Real‑world GPU acceleration on Apple Silicon with Ollama can be limited or inconsistent. 
 
-- For **true GPU acceleration** with Ollama, dedicated GPUs like **NVIDIA cards (CUDA ≥5.0)** offer the best performance. :contentReference[oaicite:6]{index=6}
+- For **true GPU acceleration** with Ollama, dedicated GPUs like **NVIDIA cards (CUDA ≥5.0)** offer the best performance.
 
-- **AMD GPU support** is available via ROCm on Linux/Windows systems, but is generally more experimental or limited compared to NVIDIA support. :contentReference[oaicite:7]{index=7}
+- **AMD GPU support** is available via ROCm on Linux/Windows systems, but is generally more experimental or limited compared to NVIDIA support.
 
 As a result, while the system *does* run locally on Apple Silicon, performance may vary depending on whether hardware acceleration is available.
 

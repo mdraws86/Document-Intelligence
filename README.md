@@ -26,7 +26,7 @@ This project explores a key question:
 
 > Can a reliable contract intelligence system be built **locally**, without external APIs?
 
-Instead of relying on rigid rules, this project uses a **Retrieval-Augmented Generation (RAG)** approach combined with structured outputs to extract meaningful and reusable data from contracts.
+Instead of relying on rigid rules, this project uses a **Retrieval Augmented Generation (RAG)** approach combined with structured outputs to extract meaningful and reusable data from contracts.
 
 ---
 
@@ -164,6 +164,24 @@ This improves both:
 - Retrieval-Augmented Generation (RAG)
 - Structured outputs (schema-based extraction)
 - Modular and extensible pipeline
+
+---
+
+## 🧪 Hardware & Performance Notes
+
+This project was developed and tested on a **MacBook Pro with an Apple M2 chip**.  
+The workflow emphasizes **fully local execution**, no external APIs are required.
+
+However, hardware can significantly affect performance:
+
+- On Apple Silicon (M‑series), Ollama runs natively and may leverage the Metal API for GPU support, but in many cases it primarily uses the **CPU**, even on M2/M‑series hardware.  
+  Real‑world GPU acceleration on Apple Silicon with Ollama can be limited or inconsistent. :contentReference[oaicite:5]{index=5}
+
+- For **true GPU acceleration** with Ollama, dedicated GPUs like **NVIDIA cards (CUDA ≥5.0)** offer the best performance. :contentReference[oaicite:6]{index=6}
+
+- **AMD GPU support** is available via ROCm on Linux/Windows systems, but is generally more experimental or limited compared to NVIDIA support. :contentReference[oaicite:7]{index=7}
+
+As a result, while the system *does* run locally on Apple Silicon, performance may vary depending on whether hardware acceleration is available.
 
 ---
 

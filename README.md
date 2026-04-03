@@ -86,9 +86,7 @@ FAISS for vector similarity search
 
 ## 📊 Dataset
 
-This project uses a synthetic contract dataset from Kaggle:
-
-https://www.kaggle.com/datasets/juniorbueno/synthetic-data-contracts
+This project uses a synthetic contract dataset from [Kaggle](https://www.kaggle.com/datasets/juniorbueno/synthetic-data-contracts).
 
 The dataset provides structured examples that simulate real-world contract variability.
 
@@ -166,7 +164,7 @@ The workflow emphasizes **fully local execution**, no external APIs are required
 
 However, hardware can significantly affect performance:
 
-- On Apple Silicon (M‑series), Ollama runs natively and may leverage the Metal API for GPU support, but in many cases it primarily uses the **CPU**, even on M2/M‑series hardware.  
+- On Apple Silicon (M‑series), Ollama runs natively and may leverage the Metal API for GPU support, but in many cases it primarily uses the **CPU**, even on M‑series hardware.  
   Real‑world GPU acceleration on Apple Silicon with Ollama can be limited or inconsistent. 
 
 - For **true GPU acceleration** with Ollama, dedicated GPUs like **NVIDIA cards (CUDA ≥5.0)** offer the best performance.

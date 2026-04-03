@@ -143,18 +143,10 @@ This transforms the model from a **text generator** into a **structured data ext
 
 ---
 
-### Retrieval Matters
+### Importance of Retrieval
 
-Rather than processing full documents:
-
-```
-Whole document → noisy results
-Relevant chunks → focused extraction
-```
-
-This improves both:
-- accuracy
-- efficiency
+Rather than processing full documents, we only want to take into account relevant chunks.
+This leads to improvements both in accuray and efficiency.
 
 ---
 

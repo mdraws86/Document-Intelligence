@@ -1,8 +1,6 @@
 # Modules
-from typing import List, Dict
 from pathlib import Path
-import PyPDF2
-
+from typing import List, Dict
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -98,53 +96,3 @@ def build_context(retriever: BaseRetriever) -> str:
     )
 
     return context
-
-def import_docs(dir: str) -> Dict[str, str]:
-    """Read all PDF files in a directory and extract their text content.
-
-    Input:
-        dir (str): Path to a directory containing PDF files.
-
-    Output:
-        Dict[str, str]: Mapping of file name (without extension) to extracted text.
-    """
-    # Gather all PDF files in the directory recursively
-    files = [x for x in Path(dir).rglob("*.pdf")]
-
-    docs = {}
-    for f in files:
-        with open(f, "rb") as pdf_file:
-            reader = PyPDF2.PdfReader(pdf_file)
-            
-            # Extract text from each page
-            text = [page.extract_text() or "" for page in reader.pages]
-
-            # Join pages into a single document string
-            docs[Path(f).stem] = "\r\n".join(text)
-
-    return docs
-
-def import_docs(dir: str) -> Dict[str, str]:
-    """Read all PDF files in a directory and extract their text content.
-
-    Input:
-        dir (str): Path to a directory containing PDF files.
-
-    Output:
-        Dict[str, str]: Mapping of file name (without extension) to extracted text.
-    """
-    # Gather all PDF files in the directory recursively
-    files = [x for x in Path(dir).rglob("*.pdf")]
-
-    docs = {}
-    for f in files:
-        with open(f, "rb") as pdf_file:
-            reader = PyPDF2.PdfReader(pdf_file)
-            
-            # Extract text from each page
-            text = [page.extract_text() or "" for page in reader.pages]
-
-            # Join pages into a single document string
-            docs[Path(f).stem] = "\r\n".join(text)
-
-    return docs

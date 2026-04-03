@@ -35,7 +35,7 @@ Instead of relying on rigid rules, this project uses a **Retrieval Augmented Gen
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/document-intelligence.git
+git clone https://github.com/mdraws86/document-intelligence.git
 cd document-intelligence
 ```
 

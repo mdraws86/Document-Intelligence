@@ -111,7 +111,7 @@ The dataset provides structured examples that simulate real-world contract varia
 - **LLM:** Qwen2.5:14b (local, via Ollama)  
 - **Embeddings:** BAAI/bge-base-en-v1.5 (via Hugging Face)  
 - **Vector Store:** FAISS for similarity search  
-- **PDF Processing:** PyPDF2 for text extraction  
+- **Document Processing:** PyPDFLoader from langchain
 - **Pipeline Framework:** LangChain Core + Community modules  
 - **Schema Validation:** Pydantic v2 for structured output  
 - **Text Splitting:** RecursiveCharacterTextSplitter for chunking  
